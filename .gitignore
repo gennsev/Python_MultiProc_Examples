@@ -1,2 +1,8 @@
 
 .DS_Store
+
+output.txt
+
+.ipynb_checkpoints/
+
+*.pyc
