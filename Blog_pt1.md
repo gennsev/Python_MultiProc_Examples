@@ -57,7 +57,7 @@ def io_intensive(x):
                 output.write(str(page))
 ```
 
-This function loads some URL addresses into memory and writes them in a local text file (50 times, always overwriting the same file). That is pretty dumb, but its purpose is just to stress an I/O bound execution. You can check this code and execute it yourself in [this Notebook](https://github.com/gsrodrigues/Python_MultiProc_Examples/blob/master/Example.ipynb).
+This function loads some URL addresses into memory and writes them in a local text file (50 times, always overwriting the same file). That is pretty dumb, but its purpose is just to stress an I/O bound execution. You can check this code and execute it yourself in [this Notebook](https://github.com/gennsev/Python_MultiProc_Examples/blob/master/Example.ipynb).
 
 Let us run that method over a list of 16 addresses and check their execution times for some different thread counts. That would get us the following graph (executing on a MacBook Air 2019).
 
@@ -78,7 +78,7 @@ def compute_intensive(x):
         foo += foo * math.cos(i*math.pi)
 ```
 
-Again, you can check this code in [this notebook](https://github.com/gsrodrigues/Python_MultiProc_Examples/blob/master/Example.ipynb) and execute it yourself (I ***strongly*** suggest you to take a look on that, as we have to make some workarounds to execute it properly on windows).
+Again, you can check this code in [this notebook](https://github.com/gennsev/Python_MultiProc_Examples/blob/master/Example.ipynb) and execute it yourself (I ***strongly*** suggest you to take a look on that, as we have to make some workarounds to execute it properly on windows).
 
 My MacBook features a dual-core processor with hyper-threading, so there is no use to force more than 4 processes running on it. Those are the results for the performance tests on this benchmark:
 
@@ -102,4 +102,4 @@ As expected, multiprocessing is also able to provide speedup on I/O bound comput
 
 * Use multiprocessing for CPU bound tasks. They can be used to handle I/O bound tasks as well, but it’s a bad idea.
 
-The next part of this series will take a deeper look on how we can implement multiprocessing and multithreading in Python and how a Data Scientist can profit from them. There are many different ways to do it, and I encourage you to get some ideas from the documentation ([here](https://docs.python.org/3/library/concurrent.futures.html), [here](https://docs.python.org/3.8/library/threading.html), [and here](https://docs.python.org/3.8/library/multiprocessing.html)) and try them out on the examples model I provided at [this notebook](https://github.com/gsrodrigues/Python_MultiProc_Examples/blob/master/Example.ipynb).
+The next part of this series will take a deeper look on how we can implement multiprocessing and multithreading in Python and how a Data Scientist can profit from them. There are many different ways to do it, and I encourage you to get some ideas from the documentation ([here](https://docs.python.org/3/library/concurrent.futures.html), [here](https://docs.python.org/3.8/library/threading.html), [and here](https://docs.python.org/3.8/library/multiprocessing.html)) and try them out on the examples model I provided at [this notebook](https://github.com/gennsev/Python_MultiProc_Examples/blob/master/Example.ipynb).
